@@ -27,19 +27,6 @@ other columns, except for casual and registered. To accomplish this, I create a 
 their performance.
 
 
-For example, the hr column in bike_rentals contains the hours during which bikes are rented, from 1 to 24. A machine will treat each hour 
-differently, without understanding that certain hours are related. We can introduce some order into the process by creating a new column 
-with labels for morning, afternoon, evening, and night. This will bundle similar times together, enabling the model to make better 
-decisions.
-
-Instructions
-Write a function called assign_label that takes in a numeric value for an hour, and returns:
-1 if the hour is from 6 to 12
-2 if the hour is from 12 to 18
-3 if the hour is from 18 to 24
-4 if the hour is from 0 to 6
-Use the apply method on series objects to apply the function to each item in the hr column.
-Assign the result to the time_label column of bike_rentals.
 Now that you've done some exploration and manipulation, you're ready to apply linear regression to the data. Linear regression will probably work fairly well on this data, given that many of the columns are highly correlated with cnt.
 
 As you learned in earlier missions, linear regression works best when predictors are linearly correlated to the target and also independent -- in other words, they don't change meaning when we combine them with each other. The good thing about linear regression is that it's fairly resistant to overfitting because it's straightforward. It also can be prone to underfitting the data, however, and not building a powerful enough model. This means that linear regression usually isn't the most accurate option.
